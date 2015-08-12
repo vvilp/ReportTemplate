@@ -1,0 +1,27 @@
+% ************************ Thesis Information & Meta-data **********************
+%% The title of the thesis
+\title{Main Title}
+
+\subtitle{sub title}
+
+\author{ZUTAO WU}
+\dept{Science and Engineering}
+\college{Queensland University of Technology}
+
+% Definition of \maketitle
+\makeatletter
+\def\@maketitle{
+    \raggedright
+    \begin{center}
+        {\Huge\@title }\\[4ex]
+        {\LARGE\@subtitle }\\[8ex]
+        \vfill
+        \includegraphics[width = 20mm]{Figs/QUT_LOGO}\\[8ex]
+        \vfill
+        {\LARGE\@author}\\[4ex]
+        {\large\@dept}\\[4ex]
+        {\large\@college}\\[8ex]
+        \vfill
+        {\large\@date}\\[8ex]
+    \end{center}}
+\makeatother
