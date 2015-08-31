@@ -7,14 +7,25 @@
 \begin{titlepage}
   \maketitle
   \thispagestyle{empty}
-  
+
 \end{titlepage}
 
+%-----------------------------------------------------------------------------
+% TOC
+%-----------------------------------------------------------------------------
+\pagenumbering{roman}
+\pagestyle{plain} % remove header
 \tableofcontents
+\newpage
 \listoffigures
 \listoftables
 
+%-----------------------------------------------------------------------------
+% Content
+%-----------------------------------------------------------------------------
 \newpage
+\pagestyle{fancy} % fancy header
+\pagenumbering{arabic}
 
 \section{Section Headings}
 We \citep{Ancey1996} BBB \citep{RR73} in this section how to obtain headings

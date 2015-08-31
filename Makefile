@@ -1,5 +1,6 @@
 report:
-	latexmk -pdf  -shell-escape report.tex 
+	latexmk -pdf  -output-directory=./build -shell-escape report.tex 
+	# pdflatex -output-directory=./build -shell-escape  report.tex
 
 clean:
 	rm -f *~
@@ -23,3 +24,4 @@ clean:
 	rm -rf *.dvi
 	rm -rf *.fdb_latexmk
 	rm -rf _minted-report
+	rm -rf build/*

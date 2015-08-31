@@ -4,9 +4,11 @@
 \RequirePackage{titlesec}
 \RequirePackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
 
+%-----------------------------------------------------------------------------
+% Definition of new command
+%-----------------------------------------------------------------------------
 \newcommand{\@subtitle}{}
 \newcommand{\subtitle}[1]{\renewcommand{\@subtitle}{#1}}
-
 
 % The full (unabbreviated) name of the degree
 \newcommand{\@degreetitle}{}
@@ -23,3 +25,12 @@
 % The name of your University
 \newcommand{\@university}{}
 \newcommand{\university}[1]{\renewcommand{\@university}{#1}}
+
+% \newcommand\frontmatter{%
+%     \cleardoublepage
+%   \@mainmatterfalse
+%   \pagenumbering{roman}}
+% \newcommand\mainmatter{%
+%     \cleardoublepage
+%   \@mainmattertrue
+%   \pagenumbering{arabic}}

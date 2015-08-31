@@ -1,10 +1,12 @@
 \usepackage[ruled, vlined]{algorithm2e}
 \usepackage{amsmath}
-\usepackage{setspace}
-\onehalfspacing
+\usepackage{setspace} \linespread{1.5}
 \usepackage{framed}
-\usepackage{minted}
-\usemintedstyle{vs}
-\RequirePackage[sort, numbers, authoryear]{natbib}
-\usepackage{times}
+\usepackage{minted} \usemintedstyle{vs}
+% \usepackage{times}
 \usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{tocbibind} % put TOC in TOC
+\RequirePackage[sort, numbers, authoryear]{natbib}
+
+\usepackage{fancyhdr} \fancyhf{}\rhead{Zutao Wu}\lhead{Signature representation for k-mer and sequence}\cfoot{\thepage}
