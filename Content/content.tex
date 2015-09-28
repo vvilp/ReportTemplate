@@ -1,0 +1,197 @@
+\section{Test Chinese}
+\begin{CJK}{UTF8}{gbsn}
+测试中文， 一二三四五六七
+\end{CJK}
+\section{Section Headings}
+We \citep{Ancey1996} BBB \citep{RR73} in this section how to obtain headings
+for the various sections and subsections of our
+document.
+\subsection{Headings in the ‘article’ Document Style}
+In the ‘article’ style, the document may be divided up
+into sections, subsections and subsubsections, and each
+can be given a title, printed in a boldface font,
+simply by issuing the appropriate command.
+
+The foundations\footnote{Inside minipage} of the rigorous study of \textit{analysis}
+were laid in the nineteenth century, notably by the
+mathematicians Cauchy and Weierstrass. Central to the
+study of this subject are the formal definitions of
+\textit{limits} and \textit{continuity}.
+
+Let $D$ be a subset of $\bf R$ and let
+$f \colon D \to \textbf{R}$ be a real-valued function on
+$D$. The function $f$ is said to be \textit{continuous} on
+$D$ if, for all $\epsilon > 0$ and for all $x \in D$,
+there exists some $\delta > 0$ (which may depend on $x$)
+such that if $y \in D$ satisfies
+\[ |y - x| < \delta \]
+then
+\[ |f(y) - f(x)| < \epsilon. \]
+
+One may readily verify that if $f$ and $g$ are continuous
+functions on $D$ then the functions $f+g$, $f-g$ and
+$f.g$ are continuous. If in addition $g$ is everywhere
+non-zero then $f/g$ is continuous.
+
+\section{algorithm}
+
+\begin{algorithm}
+\DontPrintSemicolon
+\KwData{$G=(X,U)$ such that $G^{tc}$ is an order.}
+\KwResult{$G’=(X,V)$ with $V\subseteq U$ such that $G’^{tc}$ is an
+interval order.}
+\Begin{
+$V \longleftarrow U$\;
+$S \longleftarrow \emptyset$\;
+\For{$x\in X$}{
+$NbSuccInS(x) \longleftarrow 0$\;
+$NbPredInMin(x) \longleftarrow 0$\;
+$NbPredNotInMin(x) \longleftarrow |ImPred(x)|$\;
+}
+\For{$x \in X$}{
+\If{$NbPredInMin(x) = 0$ {\bf and} $NbPredNotInMin(x) = 0$}{
+$AppendToMin(x)$}
+}
+\nl\While{$S \neq \emptyset$}{\label{InRes1}
+\nlset{REM} remove $x$ from the list of $T$ of maximal index\;\label{InResR}
+\lnl{InRes2}\While{$|S \cap ImSucc(x)| \neq |S|$}{
+\For{$ y \in S-ImSucc(x)$}{
+\{ remove from $V$ all the arcs $zy$ : \}\;
+\For{$z \in ImPred(y) \cap Min$}{
+remove the arc $zy$ from $V$\;
+$NbSuccInS(z) \longleftarrow NbSuccInS(z) - 1$\;
+move $z$ in $T$ to the list preceding its present list\;
+\{i.e. If $z \in T[k]$, move $z$ from $T[k]$ to
+$T[k-1]$\}\;
+}
+$NbPredInMin(y) \longleftarrow 0$\;
+$NbPredNotInMin(y) \longleftarrow 0$\;
+$S \longleftarrow S - \{y\}$\;
+$AppendToMin(y)$\;
+}
+}
+$RemoveFromMin(x)$\;
+}
+}
+\caption{IntervalRestriction\label{IR}}
+\end{algorithm}
+
+\section{math}
+
+\subsection{inline equation}
+In physics, the mass-energy equivalence is stated
+by the equation $E=mc^2$, discovered in 1905 by Albert Einstein.
+
+\subsection{independent}
+The mass-energy equivalence is described by the famous equation
+$$E=mc^2$$
+discovered in 1905 by Albert Einstein.
+In natural units ($c$ = 1), the formula expresses the identity
+
+\begin{equation}
+E=m
+\end{equation}
+
+\begin{equation}
+\int \oint \sum \prod \subset \supset \subseteq \supseteq \alpha \beta \gamma \rho \sigma \delta \epsilon
+\end{equation}
+
+Let $\mathbf{u}$,$\mathbf{v}$ and $\mathbf{w}$ be three
+vectors in ${\mathbf R}^3$. The volume~$V$ of the
+parallelepiped with corners at the points
+$\mathbf{0}$, $\mathbf{u}$, $\mathbf{v}$,
+$\mathbf{w}$, $\mathbf{u}+\mathbf{v}$,
+$\mathbf{u}+\mathbf{w}$, $\mathbf{v}+\mathbf{w}$
+and $\mathbf{u}+\mathbf{v}+\mathbf{w}$
+is given by the formula
+\[ V = (\mathbf{u} \times \mathbf{v}) \cdot \mathbf{w}.\]
+
+\begin{equation}
+f(x,y,z) = 3y^2 z \left( 3 + \frac{7x+5}{1 + y^2} \right)
+\end{equation}
+
+
+In non-relativistic wave mechanics, the wave function
+     $\psi(\mathbf{r},t)$ of a particle satisfies the
+     \textit{Schr\"{o}dinger Wave Equation}
+     \[ i\hbar\frac{\partial \psi}{\partial t}
+       = \frac{-\hbar^2}{2m} \left(
+         \frac{\partial^2}{\partial x^2}
+         + \frac{\partial^2}{\partial y^2}
+         + \frac{\partial^2}{\partial z^2}
+       \right) \psi + V \psi.\]
+     It is customary to normalize the wave equation by
+     demanding that
+     \[ \int \!\!\! \int \!\!\! \int_{\textbf{R}^3}
+           \left| \psi(\mathbf{r},0) \right|^2\,dx\,dy\,dz = 1.\]
+     A simple calculation using the Schr\"{o}dinger wave
+     equation shows that
+     \[ \frac{d}{dt} \int \!\!\! \int \!\!\! \int_{\textbf{R}^3}
+           \left| \psi(\mathbf{r},t) \right|^2\,dx\,dy\,dz = 0,\]
+     and hence
+     \[ \int \!\!\! \int \!\!\! \int_{\textbf{R}^3}
+           \left| \psi(\mathbf{r},t) \right|^2\,dx\,dy\,dz = 1\]
+     for all times~$t$. If we normalize the wave function in this
+34
+4 4.1
+way then, for any (measurable) subset~$V$ of $\textbf{R}^3$
+and time~$t$,
+\[ \int \!\!\! \int \!\!\! \int_V
+      \left| \psi(\mathbf{r},t) \right|^2\,dx\,dy\,dz\]
+represents the probability that the particle is to be found
+within the region~$V$ at time~$t$.
+
+\section{list}
+
+\begin{enumerate}
+\item
+$d(x,y) \geq 0$ for all points $x$ and $y$ of $X$;
+\item
+$d(x,y) = d(y,x)$ for all points $x$ and $y$ of $X$;
+\item
+$d(x,z) \leq d(x,y) + d(y,z)$ for all points $x$, $y$
+and $z$ of $X$;
+\item
+$d(x,y) = 0$ if and only if the points $x$ and $y$
+coincide.
+\end{enumerate}
+
+\begin{itemize}
+\item
+$d(x,y) \geq 0$ for all points $x$ and $y$ of $X$;
+\item
+$d(x,y) = d(y,x)$ for all points $x$ and $y$ of $X$;
+\item
+$d(x,z) \leq d(x,y) + d(y,z)$ for all points $x$, $y$
+and $z$ of $X$;
+\item
+
+$d(x,y) = 0$ if and only if the points $x$ and $y$
+coincide.
+\end{itemize}
+
+\begin{description}
+\item[test1] AAAAAA
+\item[test2] AAAAAA
+\end{description}
+
+\section{figure}
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{Figs/1}
+\caption[Minion]{This is just a long figure caption for the minion in Despicable Me from Pixar}
+\label{fig:minion}
+\end{figure}
+
+\section{box}
+
+\begin{framed}
+This is an easy way to box text within a document!
+\end{framed}
+
+\section{box and code}
+
+\begin{framed}
+\inputminted[fontsize=\footnotesize]{c}{Code/main.c}
+\end{framed}
