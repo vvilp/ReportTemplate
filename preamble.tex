@@ -32,12 +32,9 @@
 \usepackage{fancyhdr}
 
 \fancyhf{}
-% \renewcommand{\headrulewidth}{1pt} % optional
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{}
 \cfoot{\thepage}
-
-%\fancyhf{}\rhead{Zutao Wu}\lhead{Final thesis}\cfoot{\thepage}
 
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{enumitem} %\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
@@ -67,19 +64,6 @@
     \addtocounter{page}{-1}%
     \newpage}
 
-% \newcommand{\mychapter}[2]{
-% \setcounter{chapter}{#1}
-% \setcounter{section}{0}
-% \chapter*{#2}
-% \addcontentsline{toc}{chapter}{#2}
-% }
-
 \usepackage{datetime}
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
-
-% \renewcommand{\thechapter}{\Roman{chapter}}
-
-% \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-
-% \usepackage{paralist}
