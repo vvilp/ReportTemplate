@@ -1,7 +1,6 @@
 report:
-	# latexmk -pdf  -output-directory=./build -shell-escape report.TEX
-	latexmk -pdf  -xelatex -output-directory=./build -shell-escape report.tex
-	# add xelatex for chinese support
+	latexmk -pdf  -output-directory=./build -shell-escape report.tex 
+	# pdflatex -output-directory=./build -shell-escape  report.tex
 
 clean:
 	rm -f *~

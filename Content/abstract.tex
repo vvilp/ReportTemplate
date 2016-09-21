@@ -1,6 +1,20 @@
 % ************************** Thesis Abstract *****************************
-\begin{abstract}
-Next Generation Sequencing (NGS) technologies have led to an explosion in genetic and genomic datasets which has posed a significant challenge in existing sequence processing and searching methods, and has motivated new approaches for sequence processing including adaptation of methods from other domains such as information retrieval and deep learning. Measurement of sequence similarity is an important topic in bioinformatics. At present, such process is commonly conducted by BLAST and CLUSTAL, the alignment based similarity determination tools. However, alignment-based approaches may not adapt well on increasing size of datasets as well as on mutation and rearrangement of large gene fragments.
+\renewcommand{\abstractname}{\LARGE Abstract}
 
-To tackle this problems of genetic data processing and searching, I have reviewed several conventional processing approaches (alignment methods) in bioinformatics, and compare to the alignment free method using locality-sensitive hashing methods. To tackle the problem of pattern and representation learning in bioinformatics, deep learning is a notable topic in such field which may provide us another direction for data processing in bioinformatics. 
+\begin{abstract}
+
+    Next Generation Sequencing (NGS) technologies have led to an explosion in genetic and genomic datasets. This now poses a significant challenge to existing sequence processing and searching, and has resulted in a strong need for more scalable gene sequence similarity determination. This new requirement has also initiated new approaches for sequence processing, including the adaptation of methods from other domains, such as information retrieval and deep learning.
+
+    Sequence similarity measurement is a fundamental problem in bioinformatics. At present, such processes are commonly conducted using alignment-based similarity determination tools such as BLAST and Clustal. Alignment-based approaches have produced excellent results when sequences can be reliably aligned. However, such methods may not adapt well when the sequences are structurally divergent, and they do not scale well when confronted with  large-scale sequence data. The advent of NGS has resulted in the generation of a huge amount of sequencing data, which poses challenges for alignment-based algorithms for assembly, annotation and comparative studies.
+
+    To solve this problem, this work investigates an alignment-free method by generating novel representations for kmers and genes in multiple ways. Here we use the term representation to refer to short real value vectors used to represent kmers and genes when performing searches. Sequence similarity can be measured by calculating the distance between paired representations in a desirable timeframe.
+
+    This research utilises conventional methods from information retrieval and adapts approaches such as locality-sensitive hashing (LSH) and TF-IDF methods to generate kmer and sequence representations. To increase precision, we applied machine learning approaches - especially neural networks - to learn the potential relationship between kmers and to generate improved representations. The approaches investigated in this work have been thoroughly evaluated using four different sequence datasets (ALF-DNA, ALF-PROT- S, ALF-PROT and Swiss-Prot), described in detail in the text.
+
+    These experiments have revealed that representation methods are on average 10 to 15 times faster and more efficient than alignment approaches. Moreover, in the sequence comparison tasks, representations learnt from neural networks have shown mean average precision comparable to the alignment programs Blast-fast and Clustal. This work begins with the theory and extends to the specific software development tasks required for neural network learning of kmer and gene representations, and for the evaluation of performance. The thesis concludes with a summary of these contributions, and some preliminary explorations of future work based on these approaches.
+
 \end{abstract}
+
+\smallskip
+\textbf{Keywords}
+Sequence alignment, Searching, Information retrieval, Locality-sensitive hashing, TF-IDF, Random Indexing, Distance measurement, Kmer representations, Neural networks, Autoencoder neural network, Semantic neural network, Machine learning, Deep learning, Data science, Bioinformatics.

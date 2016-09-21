@@ -1,18 +1,85 @@
+\RequirePackage{titlesec}
+\RequirePackage[left=3.5cm,right=3.5cm,top=3.5cm,bottom=3.5cm]{geometry}
+\linespread{1.4}
+
+\usepackage{scrextend}
+\KOMAoption{fontsize}{13pt}
+
+\usepackage[usenames, dvipsnames]{color}
 \usepackage[ruled, vlined]{algorithm2e}
 \usepackage{amsmath}
-\usepackage{setspace} \linespread{1.5}
+\usepackage{setspace}
 \usepackage{framed}
-\usepackage[outputdir=build]{minted} \usemintedstyle{vs}
+% \usepackage{minted} \usemintedstyle{emacs}
 % \usepackage{times}
+% \setmainfont{Minion Pro}
 \usepackage{graphicx}
+\usepackage{pdflscape}
+% \usepackage{wrapfig}
+% \usepackage{lscape}
+% \usepackage{rotating}
+% \usepackage{epstopdf}
+\usepackage[export]{adjustbox}
+\usepackage{float}
 \usepackage{parskip}
 \usepackage{tocbibind} % put TOC in TOC
-\RequirePackage[sort, numbers, authoryear]{natbib}
 
-\usepackage{fancyhdr} \fancyhf{}\rhead{Zutao Wu}\lhead{Signature representation for k-mer and sequence}\cfoot{\thepage}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
 
-% chinese support, need xelatex
-\usepackage[UTF8, heading = false, scheme = plain]{ctex}
-% % \setCJKmainfont[BoldFont=STHeiti,ItalicFont=STKaiti]{STSong}
-% % \setCJKsansfont[BoldFont=STHeiti]{STXihei}
-% % \setCJKmonofont{STFangsong}
+\usepackage{url}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+% \renewcommand{\headrulewidth}{1pt} % optional
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{}
+\cfoot{\thepage}
+
+%\fancyhf{}\rhead{Zutao Wu}\lhead{Final thesis}\cfoot{\thepage}
+
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{enumitem} %\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+
+%table of content in navigation
+\usepackage{hyperref}
+\hypersetup{pdftex,colorlinks=true,allcolors=black}
+\usepackage{hypcap}
+
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{acm}
+
+% \RequirePackage[sort, numbers, authoryear]{natbib}
+% \bibliographystyle{abbrvnat}
+% \setcitestyle{authoryear,open={(},close={)}}
+% \setlength{\bibsep}{10pt}
+
+
+\usepackage[toc,page]{appendix}
+\usepackage{array}
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+% \newcommand{\mychapter}[2]{
+% \setcounter{chapter}{#1}
+% \setcounter{section}{0}
+% \chapter*{#2}
+% \addcontentsline{toc}{chapter}{#2}
+% }
+
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+% \renewcommand{\thechapter}{\Roman{chapter}}
+
+% \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+% \usepackage{paralist}

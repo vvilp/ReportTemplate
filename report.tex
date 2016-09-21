@@ -1,21 +1,34 @@
-\documentclass[a4paper,12pt]{msty}
+\documentclass[a4paper,fontsize=13pt]{msty}
 \input{preamble}
-\input{Content/title}
+\input{title}
 \begin{document}
 
 \begin{titlepage}
-  \maketitle
-  \thispagestyle{empty}
+  % \maketitle
+  % \thispagestyle{empty}
+  \input{Content/title}
+  \afterpage{\blankpage}
 \end{titlepage}
 
 %-----------------------------------------------------------------------------
-% abstract
+% authorship abstract acknowledgement
 %-----------------------------------------------------------------------------
+% \pagenumbering{gobble}
+% \input{Content/authorship}
+% \afterpage{\blankpage}
+% \newpage
+
 \pagenumbering{gobble}
 \input{Content/abstract}
+\afterpage{\blankpage}
+\newpage
+
+\pagenumbering{gobble}
+\input{Content/acknowledgement}
+\afterpage{\blankpage}
 
 %-----------------------------------------------------------------------------
-% TOC
+% table of content
 %-----------------------------------------------------------------------------
 \newpage
 \pagenumbering{roman}
@@ -24,6 +37,7 @@
 \newpage
 \listoffigures
 \listoftables
+\listofalgorithms
 
 %-----------------------------------------------------------------------------
 % Content
@@ -31,15 +45,26 @@
 \newpage
 \pagestyle{fancy} % fancy header
 \pagenumbering{arabic}
-\input{Content/content}
+% \input{Content/introduction}
+% \newpage
+% \input{Content/signature}
+% \newpage
+% \input{Content/neuralnetwork}
+% \newpage
+% \input{Content/optimisation}
+% \newpage
+% \input{Content/conclusion}
+% -----------------------------------------------------------------------------
+% Appendix
+% -----------------------------------------------------------------------------
+% \newpage
+% \input{Content/appendix}
 
 %-----------------------------------------------------------------------------
 % Reference
 %-----------------------------------------------------------------------------
+
 \newpage
-\begin{singlespace}
-% \addcontentsline{toc}{section}{References}
-\bibliographystyle{apa}
-\bibliography{references}
-\end{singlespace}
+\bibliography{references-without-url}
+
 \end{document}
